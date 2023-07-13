@@ -1,9 +1,6 @@
 import React from "react";
-
-
 import Spline from '@splinetool/react-spline';
-
-
+import './landing.css';
 
 
 function Landing() {
@@ -14,14 +11,10 @@ function Landing() {
           <h1>Tesst</h1>
           
       
-<div>
+<div className="binary-cube">
+<Spline scene="https://prod.spline.design/1YV3mver-qvdV2nK/scene.splinecode" />
 
-
-
-    <Spline scene="https://prod.spline.design/ejwfdL8rbVlER8oK/scene.splinecode" />
-
-
-</div>
+ </div>
           
         </div>
       </div>

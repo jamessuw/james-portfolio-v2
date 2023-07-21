@@ -64,8 +64,10 @@ padding: 10px;
 .landing-container{
         position: relative;
         bottom: 100px;
-    
+}
+.landing-text h1{
 
+width: 100%!important;
 
 }
 .container-fluid {

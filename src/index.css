@@ -40,7 +40,7 @@ html{
 }
 body{
     font-family: 'Rubik', sans-serif;
-    background-color: var(--color-bg);
+    background-color: var(--color-offwhite);
     color: var(--color-text);
     line-height: 1.7;
     height: 100vh;
@@ -81,7 +81,7 @@ h6{
 }
 h1{
     font-size: 2.5rem;
-    font-weight: 400;
+    font-weight: 600;
 
 /* }
 section{
@@ -205,12 +205,19 @@ section >h2 {
 }
  /*=========================== Media Queries (Small Device) =================*/
  @media screen and (max-width :1024px){
+  
+
+    h1{
+    font-size: 1.5rem;
+    }
 
     .container {
         width: var(--container-width-sm);
     }
         section{
             margin-top: 2rem;
+            display: block;
+            width: 100%;
         
     }
     

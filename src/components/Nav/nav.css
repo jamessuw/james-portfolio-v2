@@ -92,6 +92,8 @@ margin-top: 30px;
 color: var(--color-text);
 background-color: transparent;
 font-family:'Rubik', sans-serif;
+position: absolute;
+
 
 }
 a#Nav-container :hover {
@@ -199,6 +201,9 @@ ul.mr-auto.navbar-nav{
     }
   }
   @media screen and (max-width: 768px) {
+    div#Nav-container {
+        position: relative;
+    }
     .navigation-menu ul {
         position: absolute;
         top: 60px;

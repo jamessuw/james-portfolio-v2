@@ -196,9 +196,15 @@ section >h2 {
 
     .container {
         width: var(--container-width-md);
+        display: block;
+     
     }
         section{
             margin-top: 6rem;
+       
+                display: block;
+                width: 100%;
+            
         
     }
     
@@ -213,11 +219,14 @@ section >h2 {
 
     .container {
         width: var(--container-width-sm);
+        display: block;
+        
     }
         section{
             margin-top: 2rem;
             display: block;
             width: 100%;
+            
         
     }
     

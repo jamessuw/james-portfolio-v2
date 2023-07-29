@@ -98,7 +98,7 @@ div#cube-canva {
             justify-content: left;
             display: flex;
             position: absolute;
-            right: 20px;
+           
            
     
 }
@@ -106,11 +106,13 @@ div#cube-canva {
 .container-text {
     display: flex;
     flex-direction: column;
-    width: 329px;
+
+    text-align: center;
     
 }
 .landing-catalog{
     margin-top: 50px;
+    justify-content: center;
 }
 .circle{
 display: none;

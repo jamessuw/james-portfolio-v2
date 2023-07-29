@@ -4,6 +4,8 @@ import NavMenu from "./components/Nav/NavMenu";
 import "bootstrap/dist/css/bootstrap.min.css";
 // import ParticleComp from './components/Particle/ParticleComp';
 import Landing from './components/Landing/Landing';
+import About from './components/About/About';
+
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
     {/* <ParticleComp/> */}
     <NavMenu/>
     <Landing/>
+    <About/>
 
 </>
   );

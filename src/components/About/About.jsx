@@ -1,9 +1,16 @@
-import React from 'react'
+
 import './about.css';
 // import aboutJamesImage from '../src/assets/images/about-james.jpg';
+import { Avatar } from '@readyplayerme/visage';
+import React, { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
+import Model from './Model'; /* highlight-line */
 
 
 
+
+const modelSrc = 'https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb';
 
 
 function About() {
@@ -13,8 +20,60 @@ function About() {
 
           
             <div className='container-1'>
-            
-            <img src="about-james.jpg" alt="About James" id='image-about' />
+              <div className='avatar-3D'>
+                
+      <h5>This is Me!</h5>
+            <Canvas
+         camera={{ position: [2, 0, 12.25], fov: 15 }}
+         style={{
+            backgroundColor: 'transparent',
+            width: '25vw',
+            height: '100vh',
+            id:'canvaId'
+         }}
+      >
+         <ambientLight intensity={0.1} />
+         <ambientLight intensity={0.1} />
+         <directionalLight 
+         intensity={1.5}
+         shadow-camera-far={90}
+         />
+         <Suspense fallback={null}>
+            <Model position={[0.025, -0.9, 0]} /> /* highlight-line */
+         </Suspense>
+         <OrbitControls autoRotate={false} enableZoom={false}/>
+         
+      </Canvas>
+</div>
+
+            {/* <div className='avatar-3D'><Avatar
+  ambientLightColor="#fff5b6"
+  ambientLightIntensity={0.25}
+ 
+  background={{}}
+  cameraInitialDistance={0}
+  cameraTarget={1.65}
+  cameraZoomTarget={null}
+  className="avatar"
+  dirLightColor="#002aff"
+  dirLightIntensity={5}
+  environment="hub"
+  headMovement
+  idleRotation
+  modelSrc="https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb"
+  poseSrc='https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb'
+  onLoaded={function noRefCheck(){}}
+  onLoading={function noRefCheck(){}}
+  scale={1}
+  spotLightAngle={0.314}
+  spotLightColor="#fff5b6"
+  spotLightIntensity={1}
+
+  style={{
+    background: 'transparent'
+  }} */}
+
+            {/* <img src="about-james.jpg" alt="About James" id='image-about' /> */}
             <div className='icon-container-profile'>
             <div className='icon-profile'><a href='https://github.com/jamessuw'><img className="github-logo-icon"src='github-logo-icon.png'></img></a></div> 
             <div className='icon-profile'><a href='https://www.linkedin.com/in/jamessuryawijaya/'><img className="linkedin-logo-icon"src='linkedin-logo-icon.png'></img></a></div> 

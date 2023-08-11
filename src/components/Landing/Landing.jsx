@@ -26,14 +26,15 @@ useEffect(() => {
 
 
   return (
+
     <section id='sct-landing-mobile'>
       <div className="container" id='landing-container'>
         <div className="container-1" id="landing-page">
 <div className="binary-cube">
 <Spline  id="cube-canva" scene="https://prod.spline.design/1YV3mver-qvdV2nK/scene.splinecode" />
-
-
 </div>
+
+
 
 <div className='container-text'>
 <div className="landing-text">

@@ -1,10 +1,16 @@
+.avatar-3D{
+    display: block;
+    height: 100vh;
+}
+
 section#About-section {
 
     background-color: #eeebeb;
     border-top-left-radius: 60px 70px;
     border-top-right-radius: 60px 70px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
     height: 100%;
+    padding: 100px;
 }
 #About-section{
     margin-top: 100px;
@@ -39,6 +45,12 @@ section#About-section {
     display: inline-flex;
     margin-top: 5px;
     margin-left: 3px;
+    cursor: pointer;
+}
+.skills-pill:hover{
+    background-color:#ff6600 ;
+    transition: 1s;
+
 }
 .icon-container-profile{
     display: flex;
@@ -49,6 +61,7 @@ section#About-section {
 .github-logo-icon, .linkedin-logo-icon{
 width: 30px;
 }
+
 @media screen and (max-width: 768px) {
 
     .container-1{

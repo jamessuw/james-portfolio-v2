@@ -65,7 +65,7 @@ width: 30px;
 @media screen and (max-width: 768px) {
 
     .container-1{
-        padding: 13px;
+        padding: none!important;
     }
     .text-container{
         display: flex;
@@ -80,6 +80,18 @@ width: 30px;
     }
     .skills-container {
         display: contents;
+    }
+    section#About-section {
+        background-color: #eeebeb;
+        border-top-left-radius: 60px 70px;
+        border-top-right-radius: 60px 70px;
+        /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+        height: 100%;
+        padding: 0!important;
+        width: 100%;
+    }
+    .about-text h1{
+        font-size: 40px;
     }
 
 }

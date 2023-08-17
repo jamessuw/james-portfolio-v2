@@ -27,7 +27,7 @@ function About() {
          camera={{ position: [2, 0, 12.25], fov: 15 }}
          style={{
             backgroundColor: 'transparent',
-            width: '25vw',
+            width: '100%',
             height: '100vh',
             id:'canvaId'
          }}

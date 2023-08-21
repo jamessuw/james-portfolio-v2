@@ -21,20 +21,53 @@
       justify-content: space-between;
   
   }
-    .list-text {
-        display: flex;
-        padding: 15px;
-        flex-direction: column;
-        border-bottom: solid 0.2px grey;
-        background-color: #006ee6;
-        border-radius: 28px;
-        margin-bottom: 16px;
-        color: white;
-        /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
-        /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    
+  .list-text {
+    display: flex;
+    padding: 15px;
+    flex-direction: column;
+    border: solid 0.2px #abaaaa;
+    /* background-color: #006ee6; */
+    border-radius: 28px;
+    margin-bottom: 10px;
+    /* color: white; */
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+transition: 0.3s;
+  }
+.list-text:hover{
+  box-shadow: 0 0.25em 0.25em -0.1em rgb(172, 172, 174);
+  transform: translateY(-0.25em);
+  animation-delay: 1s;
+
+}
   
+#tech-pill{
+
+    background-color: #30d8d8;
+}
+#location-pill{
+
+    background-color: #ff6347e6;
+
+}
+#service-pill {
+  background-color: #d0d074;
+}
+.box1 h1{
+     font-size: 4.5rem;
+    font-weight: 600;
+
+}
+
+  .box2{
+    position: relative;
+    text-align: end;
+
+  }
+  .project-container {
+    padding-top: 10px;
+
   }
   
 
@@ -201,7 +234,7 @@ body:not(.mobile) .list-text:hover + .img-project img{
         
 }
 .project-pill{
-    border: solid 0.5px rgb(244, 240, 240);
+    border: solid 0.5px rgba(47, 45, 45, 0);
     padding: 10px;
     border-radius: 18px;
    
@@ -225,4 +258,39 @@ body:not(.mobile) .list-text:hover + .img-project img{
   
   .hover-container:hover img {
     display: block;
+  }
+
+  @media screen and (max-width: 768px) {
+    #project-section{
+      width: var(--container-width-sm);
+      display: flex!important;
+      flex-direction: column-reverse!important;
+      height: 100%;
+  }
+
+    .project-pill-container {
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+      height: 50px;
+  }
+  .project-pill-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 50px;
+}
+.project-pill p{
+  font-size: 10px;
+}
+.img-project {
+  z-index: 100;
+  width: 100%;
+}
+#project-section-container {
+  background-color: #e4e4e4;
+  position: relative;
+  overflow-y: hidden;
+}
+
   }

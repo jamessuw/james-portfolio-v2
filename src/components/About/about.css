@@ -1,17 +1,20 @@
 .avatar-3D{
-    display: block;
-    height: 100vh;
+  
+        display: block;
+        height: 100vh;
+        
 }
 
 section#About-section {
+        background-color: #eeebeb;
+        border-top-left-radius: 60px 70px;
+        border-top-right-radius: 60px 70px;
+        /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+        height: 100%;
+        padding: 100px;
+        box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    }
 
-    background-color: #eeebeb;
-    border-top-left-radius: 60px 70px;
-    border-top-right-radius: 60px 70px;
-    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
-    height: 100%;
-    padding: 100px;
-}
 #About-section{
     margin-top: 100px;
 }
@@ -63,9 +66,16 @@ width: 30px;
 }
 
 @media screen and (max-width: 768px) {
+    .avatar-3D{
+  
+        display: block;
+        height: 100%;
+        overflow-y: hidden;
+    
+}
 
     .container-1{
-        padding: none!important;
+        padding: 15px!important;
     }
     .text-container{
         display: flex;

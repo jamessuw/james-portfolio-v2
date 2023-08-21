@@ -1,10 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import './project.css'
 import { Container } from 'reactstrap'
 // import Popup from 'reactjs-popup';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+
+
 
 
 function Project() {
+
+
+
   const [hoveredItem, setHoveredItem] = useState(null);
 
   
@@ -55,13 +64,48 @@ function Project() {
     
   ];
 
+  
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  let container = document.getElementById("project-section-container");
+
+  useEffect(() => {
+    gsap.to('.box1', {
+      xPercent: 30,
+      ease: 'power1.inOut',
+      scrollTrigger: {
+        trigger: '.box1',
+        pin: false,
+        scrub: 1,
+        snap: false,
+      },
+    });
+
+    gsap.to('.box2', {
+      xPercent: -65,
+      ease: 'power1.inOut',
+      scrollTrigger: {
+        trigger: '.box2', // Change trigger to '.box2'
+        pin: false,
+        scrub: 1,
+        snap: false,
+      },
+    });
+  }, []);
+
+
   return (
 
     
     <section id='project-section-container'>
-      <h1>PROJECT</h1>
-      <h2>ARC`HIVE</h2>
-      <div className='container'>
+     
+      <div data-speed="0.5" className='box1'><h1>PROJECT</h1></div>
+     <div data-speed="0.5" className='box2'><h2>ARC`HIVE</h2></div> 
+
+
+
+      <div className='container' id='project-section'>
       {/* list container descriptions*/}
       <div className='container-1'>
 
@@ -75,13 +119,12 @@ function Project() {
             <div className='list-text'>
               <h4>{item.name}</h4>   
               <div className='project-pill-container'>
-              <div className='project-pill'> <p>{item.tech}</p></div><div className='project-pill'> <p>{item.location}</p></div><div className='project-pill'> <p>{item.service}</p></div>
+              <div className='project-pill' id='tech-pill'> <p>{item.tech}</p></div><div className='project-pill' id="location-pill"> <p>{item.location}</p></div><div className='project-pill' id='service-pill'> <p>{item.service}</p></div>
               </div>
             </div>
           </div>
         ))}
-        
-      </div>
+        </div>
 
     {/* Image container -project */}
       <div className='container-1'>
@@ -104,7 +147,9 @@ function Project() {
           </div>
         ))}
       </div>
-      {/* ... */}</div>
+      {/* ... */}
+      
+      </div>
       
     </section>
 

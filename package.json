@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@cyriacbr/react-split-text": "^1.0.0",
     "@react-three/drei": "^9.80.0",
     "@react-three/fiber": "^8.13.6",
     "@readyplayerme/rpm-react-sdk": "^0.1.4",

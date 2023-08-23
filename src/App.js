@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Landing from './components/Landing/Landing';
 import About from './components/About/About';
 import Project from './components/Project/Project';
+import Contact from './components/Contact/Contact';
 
 
 
@@ -17,6 +18,7 @@ function App() {
     <Landing/>
     <About/>
     <Project/>
+    <Contact/>
    
 </>
   );

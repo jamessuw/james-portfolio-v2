@@ -38,10 +38,31 @@ function About() {
          <ambientLight intensity={0.1} />
          <ambientLight intensity={0.1} />
          <directionalLight 
-         intensity={1.5}
-         shadow-camera-far={90}
+         intensity={1.2}
+         shadow-camera-far={20}
+         shadow-camera-bottom={-10}
+         shadow-camrea={false}
+         color="#FFFFFF"
+         shadow-radius={5} 
+         castShadow
+        shadow-mapSize-height={512}
+        shadow-mapSize-width={512}
          />
          <Suspense fallback={null}>
+         <pointLight
+        castShadow
+        intensity={0.2}
+        args={[0xff0000, 1, 100]}
+        position={[1, 1, 1]}
+      />
+
+      <spotLight
+        castShadow
+        intensity={1.5}
+        args={["grey", 1, 100]}
+        position={[-1, 1, 1]}
+        distance={10}
+      />
             <Model position={[0.025, -0.9, 0]} /> /* highlight-line */
          </Suspense>
          <OrbitControls autoRotate={false} enableZoom={false}/>

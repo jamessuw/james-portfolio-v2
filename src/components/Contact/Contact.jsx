@@ -2,6 +2,8 @@ import "./contact.css";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 
+
+
 function Contact() {
   const form = useRef();
 
@@ -18,7 +20,7 @@ function Contact() {
       .then(
         (result) => {
           console.log(result.text);
-          window.alert("Message has been sent!"); // Display an alert window
+          window.alert("Thank you. Message has been sent! James will be in touch soon :)"); // Display an alert window
         },
         (error) => {
           console.log(error.text);
@@ -34,7 +36,12 @@ function Contact() {
           {" "}
           <h1>CONTACT</h1>
         </span>
-        <div className="container-1"></div>
+        <div className="container-1">
+
+
+</div> 
+
+
         <div className="container-1">
           <section>
             <form

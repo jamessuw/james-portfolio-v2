@@ -39,60 +39,30 @@ function Contact() {
   };
 
   return (
-    <section>
-      <div className="container">
-        <span>
+    <section id="contact-section"> 
+      <span className="heading-project">
           {" "}
-          <h1>CONTACT</h1>
+          <h2>LET'S CONNECT &  GET TO KNOW<br></br> EACH OTHER</h2>
         </span>
+      <div className="container">
+       
         <div className="container-1">
-        <Canvas
-         camera={{ position: [2, 0, 12.25], fov: 15 }}
-         style={{
-            backgroundColor: 'transparent',
-            width: '100%',
-            height: '100vh',
+          <div className="container-abstracts">
+        
+<div class='blob'>
 
-         }}
-      >
-         <ambientLight />
-         <ambientLight intensity={1.25} />
-         <ambientLight intensity={0.1} />
-         
-         <directionalLight 
-         intensity={0.4}
-         shadow-camera-far={20}
-         shadow-camera-bottom={-10}
-         shadow-camrea={false}
-         color="#FFFFFF"
-         shadow-radius={5} 
-         castShadow
-        shadow-mapSize-height={512}
-        shadow-mapSize-width={512}
-         />
-         <Suspense fallback={null}>
-         <pointLight
-        castShadow
-        intensity={0.2}
-        args={[0xff0000, 1, 100]}
-        position={[1, 1, 1]}
-      />
-
-      <spotLight
-        castShadow
-        intensity={1.5}
-        args={["grey", 1, 100]}
-        position={[-1, 1, 1]}
-        distance={10}
-      />
-            <Model position={[0.025, -0.9, 0]} /> /* highlight-line */
-         </Suspense>
-         <OrbitControls autoRotate={false} enableZoom={false}/>
-         
-      </Canvas>
-
-
-</div> 
+ 
+</div>
+<p className="tag-contact">
+    IM CURRENTLY OPEN FOR PROJETC <br></br>
+    FEEL FREE TO REACH OUT ILL CONTACT<br></br>AS
+    SOON AS I CAN THANK YOU
+  </p>
+        <div className="ball" id="ball-1"></div>
+                <div className="abstracts"></div>
+                <div className="ball"></div>
+     </div>
+       </div> 
 
 
         <div className="container-1">

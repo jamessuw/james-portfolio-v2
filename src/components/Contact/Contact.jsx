@@ -11,6 +11,7 @@ import Model from './Model'; /* highlight-line */
 
 
 
+
 function Contact() {
     const modelSrc = 'https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb';
 
@@ -47,12 +48,15 @@ function Contact() {
       <div className="container">
        
         <div className="container-1">
+          
+  
           <div className="container-abstracts">
         
 <div class='blob'>
 
  
 </div>
+
 <p className="tag-contact">
     IM CURRENTLY OPEN FOR PROJETC <br></br>
     FEEL FREE TO REACH OUT ILL CONTACT<br></br>AS
@@ -62,7 +66,9 @@ function Contact() {
                 <div className="abstracts"></div>
                 <div className="ball"></div>
      </div>
+
        </div> 
+
 
 
         <div className="container-1">

@@ -12,6 +12,9 @@ border-radius: 70px;
 padding: 10px;
 
 }
+.landing-text{
+    width: 100%;
+}
 .landing-text h1{
     margin-top: 10px;
     width: 500px;
@@ -27,6 +30,7 @@ padding: 10px;
 }
 .landing-catalog{
     display: inline-flex;
+    width: 100%;
 }
 .landing-catalog h1 {
     font-weight: 500;

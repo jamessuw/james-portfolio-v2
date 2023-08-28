@@ -7,23 +7,26 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 
-
-
-
 function Project() {
-
-
-
   const [hoveredItem, setHoveredItem] = useState(null);
+  const [unhoveredItemImage, setUnhoveredItemImage] = useState(null);
 
-  
+
   const handleMouseEnter = (itemName) => {
     setHoveredItem(itemName);
+    setUnhoveredItemImage(null);
   };
 
-  const handleMouseLeave = () => {
+  const handleMouseLeave = (itemName) => {
     setHoveredItem(null);
+    if (itemName === '') {
+      // Keep "KumalaJingga" image displayed when unhovered
+    } else {
+      setUnhoveredItemImage(itemName);
+      console.log(`${itemName} unhovered`);
+    }
   };
+
 
   const projectItems = [
     {
@@ -32,7 +35,8 @@ function Project() {
       text: "",
       tech:"Wordpress",
       service:"Web Development",
-      location:"Indonesia"
+      location:"Indonesia",
+
     },
     {
       name:"ClearDynamics",
@@ -56,13 +60,18 @@ function Project() {
       text: "",
       tech:"Shopify",
       service:"Web Development",
-      location:"Indonesia"
+      location:"Indonesia",
+     
+
     },
 
     // Add more project items here
 
     
   ];
+  useEffect(() => {
+    setUnhoveredItemImage(projectItems[0].imageSrc);
+  }, []);
 
   
 
@@ -96,14 +105,12 @@ function Project() {
 
 
   return (
+  
 
     
     <section id='project-section-container'>
-     
       <div data-speed="0.5" className='box1'><h1>PROJECT</h1></div>
      <div data-speed="0.5" className='box2'><h2>ARC`HIVE</h2></div> 
-
-
 
       <div className='container' id='project-section'>
       {/* list container descriptions*/}
@@ -114,7 +121,7 @@ function Project() {
             key={item.name}
             className='project-container'
             onMouseEnter={() => handleMouseEnter(item.name)}
-            onMouseLeave={handleMouseLeave}
+            onMouseLeave={() => handleMouseLeave (item.name)}
           >
             <div className='list-text'>
               <h4>{item.name}</h4>   
@@ -127,27 +134,38 @@ function Project() {
         </div>
 
     {/* Image container -project */}
-      <div className='container-1'>
+    
 
+    <div className='container-1'>
+      
         {projectItems.map((item) => (
           <div
             key={item.name}
             className='image-container'
           >
-            {hoveredItem === item.name && (
+            {(hoveredItem === item.name || unhoveredItemImage === item.name) && (
               <div className='hovered-item'>
-                <img
-                  className='img-project'
-                  src={item.imageSrc}
-                  alt={item.name}
-                />
+            <img
+                    className='img-project'
+                    src={
+                      hoveredItem === item.name
+                        ? item.hoverImageSrc || item.imageSrc
+                        : unhoveredItemImage === item.name
+                        ? item.imageSrc
+                        : null
+                    }
+                    alt={item.name}
+                  />
                 <p>{item.text}</p>
               </div>
             )}
           </div>
+          
         ))}
       </div>
+      
       {/* ... */}
+      
       
       </div>
       

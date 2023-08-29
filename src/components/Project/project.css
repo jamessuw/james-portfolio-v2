@@ -72,7 +72,7 @@ transition: 0.3s;
   .blob-container{
     z-index: 1;
     position: absolute;
-    height: 70%;
+    height: 100%;
 }
 .image-container{
     z-index: 100;
@@ -80,13 +80,6 @@ transition: 0.3s;
     position: absolute;
 
 }
-canvas{
-  display: block;
-    width: 385px;
-    height: 677.6px;
-
-}
-
 /* 
 button#folder-button {
     background: none;

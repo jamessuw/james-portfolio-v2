@@ -20,8 +20,8 @@ function Landing() {
 
  <div className="binary-cube">
  <div className='blob-container'>
-      <Canvas camera={{position:[0.0,0.0,8.0]}} >
-<Blob/>
+      <Canvas camera={{position:[0.0,0.0,8.0]}} shadow>
+<Blob />
 </Canvas>
 </div>
 </div> 

@@ -1,3 +1,29 @@
+.blob-container{
+    height: 100%;
+    width: 100%;
+    display: block;
+  
+}
+canvas {
+    height: 100%;
+    width: 100%;
+    animation-name: float;
+    transform-origin: 50% 50%;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes float {
+	to {
+		top: 0;
+	} from {
+		top: 30px;
+	}
+}
+
+
 .binary-cube{
 display: flex;
 height: 650px!important;

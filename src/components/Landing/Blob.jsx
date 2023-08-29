@@ -7,6 +7,9 @@ import fragmentShader from "./fragmentShader";
 function Blob() {
   const mesh = useRef();
   const hover = useRef(false);
+  const shouldCastShadow = useMemo(() => Math.random() < 8.5, []);
+  const shouldReceiveShadow = useMemo(() => Math.random() < 8.5, []); // Random value for receiveShadow
+
   const uniforms = useMemo(() => {
     return {
       u_time: { value: 0 },
@@ -17,6 +20,10 @@ function Blob() {
   useFrame((state) => {
     const { clock } = state;
     if (mesh.current) {
+      mesh.current.rotation.x += 0.004; // Adjust the rotation speed here
+      mesh.current.rotation.y += 0.003; // Adjust the rotation speed here
+
+
       mesh.current.material.uniforms.u_time.value =
         0.4 * clock.getElapsedTime();
 
@@ -30,10 +37,13 @@ function Blob() {
   return (
     <mesh
       ref={mesh}
-      scale={1.5}
+      scale={1.8}
       position={[0, 0, 0]}
       onPointerOver={() => (hover.current = true)}
       onPointerOut={() => (hover.current = false)}
+      castShadow={shouldCastShadow} 
+      receiveShadow={shouldReceiveShadow}
+      
     >
       <icosahedronGeometry args={[2, 20]} />
       <meshStandardMaterial />

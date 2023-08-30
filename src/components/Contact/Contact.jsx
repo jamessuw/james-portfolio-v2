@@ -39,6 +39,9 @@ function Contact() {
     e.target.reset();
   };
 
+  
+
+
   return (
     <section id="contact-section"> 
       <span className="heading-project">
@@ -48,7 +51,7 @@ function Contact() {
       <div className="container">
        
         <div className="container-1">
-          
+  
   
           <div className="container-abstracts">
         

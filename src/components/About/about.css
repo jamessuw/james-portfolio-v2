@@ -49,6 +49,7 @@ section#About-section {
     margin-top: 5px;
     margin-left: 3px;
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .skills-pill:hover{
     background-color:#ff6600 ;

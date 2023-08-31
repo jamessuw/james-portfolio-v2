@@ -1,3 +1,22 @@
+
+    .pill-design {
+
+            background-color: #e6e6e6d6;
+            /* height: 100%; */
+            display: block;
+            width: 30%;
+            text-align: center;
+            padding: 5px;
+            border-radius: 30px;
+            margin-bottom: 10px;
+            box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+            /* color: #ffffffff; */
+            text-transform: capitalize;
+            padding: 11px;
+            border: solid 1px;
+        
+    }
+
 .blob-container{
     height: 100%;
     width: 100%;
@@ -36,6 +55,7 @@ bottom: 80px;
 margin-top: 100px;
 border-radius: 70px;
 padding: 10px;
+height: 100vh;
 
 }
 .landing-text{
@@ -74,6 +94,12 @@ padding: 10px;
 
   }
 @media screen and (max-width: 988px) {
+    
+    .pill-design {
+        width: 100%;
+        
+    }
+
     div#Nav-container {
             width: 100%;
             display: flex;

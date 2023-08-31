@@ -31,7 +31,8 @@ function Landing() {
 <div className='container-text'>
 <div className="landing-text">
 {/* <h1>{text}</h1> */}
-<h5>James Wijaya</h5><a href="#" title="LinkedIn"><i class="fa fa-linkedin fa-fw"></i> LinkedIn</a> | <a href="#" title="LinkedIn"><i class="fa fa-linkedin fa-fw"></i> GitHub</a>
+<span className="pill-design"><h5>James Wijaya</h5></span>
+<span className="pill-design"><a href="#" title="LinkedIn"><i class="fa fa-linkedin fa-fw"></i> LinkedIn</a> | <a href="#" title="LinkedIn"><i class="fa fa-linkedin fa-fw"></i> GitHub</a></span>
 
 
 </div>

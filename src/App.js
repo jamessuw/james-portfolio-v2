@@ -14,39 +14,55 @@ import { useEffect } from 'react';
 
 
 
-
-
 function App() {
-  let sections = gsap.utils.toArray(".panel");
-
   useEffect(() => {
-    const sections = gsap.utils.toArray('.panel');
+    const mediaQueryHandler = () => {
+      const sections = gsap.utils.toArray('.panel');
 
-    ScrollTrigger.config({ 
-      ignoreMobileResize: true
-    });
-
-    sections.forEach((panel, i) => {
-      gsap.to(panel, {
-        scrollTrigger: {
-          trigger: panel,
-          start: 'top top',
-          scrub: 1,
-          makers:true,
-          pin: true,
-          pinSpacing: false,
-          end: "+=150%",
-          // scroller: '.container', // for mobile responsive 
-          snap: {
-            snapTo: 1,
-            duration: { min: 0.5, max: 0.5 }
-          }
-        }
+      ScrollTrigger.config({
+        ignoreMobileResize: true,
       });
-    });
+
+      sections.forEach((panel, i) => {
+        gsap.to(panel, {
+          scrollTrigger: {
+            trigger: panel,
+            scrub: 2,
+            pin: true,
+            pinSpacing: false,
+            start: "top", 
+            end: () => `+=${panel.clientHeight}`,
+            onUpdate: self => console.log("progress:", self.progress),
+            
+            
+          
+          },
+        });
+      });
+    };
+    
+
+    const mm = window.matchMedia('(min-width: 800px)');
+
+    if (mm.matches) {
+      mediaQueryHandler();
+    }
+
+    const mediaQueryListener = (event) => {
+      if (event.matches) {
+        mediaQueryHandler();
+      } else {
+        // Optional: Custom cleanup code here (runs when it stops matching)
+      }
+    };
+
+    mm.addListener(mediaQueryListener);
+
+    return () => {
+      mm.removeListener(mediaQueryListener);
+    };
   }, []);
 
-  
   ScrollTrigger.config({ 
     ignoreMobileResize: true
   });

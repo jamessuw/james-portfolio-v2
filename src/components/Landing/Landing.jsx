@@ -13,7 +13,7 @@ function Landing() {
 
   return (
 
-    <section id='sct-landing-mobile'>
+    <section id='sct-landing-mobile' className='Landing-section'>
       <div className="container" id='landing-container'>
         <div className="container-1" id="landing-page">
    
@@ -42,7 +42,7 @@ function Landing() {
 
 <div className='landing-catalog'>
   <div className='circle' id='catalog-circle'></div>
-<h1>HEY, WELCOME TO MY PORTFOLIO FEEL FREE TO BROWSE AROUND! </h1>
+<h1>HI, IM A FRONT-END ENGINNERS! WELCOME TO MY PORTFOLIO FEEL FREE TO BROWSE. MORE UPDATE ARE COMMING SOON! </h1>
 </div>
 </div>
           

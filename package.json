@@ -16,6 +16,7 @@
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.0",
     "gsap": "^3.12.2",
+    "gsap-trial": "^3.12.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-modal": "^3.16.1",
@@ -25,7 +26,6 @@
     "react-tsparticles": "^2.9.3",
     "reactjs-popup": "^2.0.5",
     "reactstrap": "^9.1.10",
-    "stagger-text-reveal-animation": "^1.0.0",
     "three": "^0.154.0",
     "tsparticles": "^2.9.3",
     "web-vitals": "^2.1.4"

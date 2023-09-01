@@ -25,8 +25,11 @@ function About() {
           
             <div className='container-1'>
               <div className='avatar-3D'>
-                
-      <h5>This is Me!</h5>
+              <div className='icon-container-profile'>
+            <div className='icon-profile'><a href='https://github.com/jamessuw'><img className="github-logo-icon"src='github-logo-icon.png'></img></a></div> 
+            <div className='icon-profile'><a href='https://www.linkedin.com/in/jamessuryawijaya/'><img className="linkedin-logo-icon"src='linkedin-logo-icon.png'></img></a></div> 
+           </div>
+    
             <Canvas
          camera={{ position: [2, 0, 12.25], fov: 15 }}
          style={{
@@ -69,6 +72,7 @@ function About() {
          <OrbitControls autoRotate={true} enableZoom={false}/>
          
       </Canvas>
+      
 </div>
 
             {/* <div className='avatar-3D'><Avatar
@@ -99,10 +103,7 @@ function About() {
   }} */}
 
             {/* <img src="about-james.jpg" alt="About James" id='image-about' /> */}
-            <div className='icon-container-profile'>
-            <div className='icon-profile'><a href='https://github.com/jamessuw'><img className="github-logo-icon"src='github-logo-icon.png'></img></a></div> 
-            <div className='icon-profile'><a href='https://www.linkedin.com/in/jamessuryawijaya/'><img className="linkedin-logo-icon"src='linkedin-logo-icon.png'></img></a></div> 
-           </div>
+         
 
             </div>
             <div className='container-1'>

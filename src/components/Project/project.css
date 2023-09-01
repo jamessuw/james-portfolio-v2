@@ -6,6 +6,7 @@
    border-top-right-radius: 60px 70px;
    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
    padding: 35px;
+   height: 100vh;
   
 }
 .project-head{
@@ -71,6 +72,7 @@ transition: 0.3s;
   }
   .project-container {
     padding-top: 10px;
+    pointer-events: auto;
 
   }
   .blob-container{
@@ -250,6 +252,7 @@ body:not(.mobile) .list-text:hover + .img-project img{
     border: solid 0.5px rgba(47, 45, 45, 0);
     padding: 10px;
     border-radius: 18px;
+    overflow-y: hidden;
    
 
    

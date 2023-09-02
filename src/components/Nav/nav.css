@@ -203,6 +203,7 @@ ul.mr-auto.navbar-nav{
   @media screen and (max-width: 768px) {
     div#Nav-container {
         position: relative;
+        width: 90%;
     }
     .navigation-menu ul {
         position: absolute;
@@ -236,6 +237,12 @@ ul.mr-auto.navbar-nav{
       /* previous styles */
       display: none;
     }
+  }
+  
+  div#Nav-container {
+    width: 80%;
+    display: flex;
+    margin: 0;
   }
   @media screen and (max-width: 768px) {
     .circle-nav {
@@ -280,7 +287,11 @@ ul.mr-auto.navbar-nav{
           border-radius: 25px;
           background-image: none;
           z-index: 999;
-      }
+            width: 45px;
+            height: 45px;
+            
+        }
+      
       a.Nav-Link.nav-link {
         color: var(--color-text);
         font-family: 'Rubik', sans-serif;

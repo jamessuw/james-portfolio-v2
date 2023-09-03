@@ -1,4 +1,3 @@
-import Spline from "@splinetool/react-spline";
 import React, { useState, useEffect } from "react";
 import "./landing.css";
 import Blob from "../Landing/Blob.jsx";

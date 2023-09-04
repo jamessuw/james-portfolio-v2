@@ -4,21 +4,27 @@
 
 
 .pill-design {
-    background-color: #e6e6e6d6;
-    height: 55%;
-    display: block;
-    width: 100%;
-    text-align: center;
-    border-radius: 30px;
-    margin-bottom: 10px;
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    /* color: #ffffffff; */
-    text-transform: capitalize;
-    padding: 11px;
-    border: solid 1px;
-    pointer-events: auto;
-    transition: 1s;
-    margin: 10px;
+    
+        background-color: #0c3df6cf;
+        height: 55%;
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-radius: 30px;
+        margin-bottom: 10px;
+        box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+        color: #ffffffff;
+        text-transform: capitalize;
+        padding: 11px;
+        /* border: solid 1px; */
+        pointer-events: auto;
+        transition: 1s;
+        margin: 10px;
+    
+
+}
+.pill-design a{
+    color: #ffffff;
 }
 
 

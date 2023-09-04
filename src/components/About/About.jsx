@@ -2,10 +2,13 @@
 import './about.css';
 // import aboutJamesImage from '../src/assets/images/about-james.jpg';
 import { Avatar } from '@readyplayerme/visage';
-import React, { Suspense } from 'react';
+import React, { Suspense,useEffect } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Model from './Model'; /* highlight-line */
+import gsap from 'gsap';
+
+
 
 
 
@@ -17,6 +20,16 @@ const modelSrc = 'https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb';
 
 
 function About() {
+  useEffect(() => {
+    // Define your animation
+    const animation = gsap.timeline({ paused: true });
+  
+    // Stagger animation for elements with class 'stagger-up'
+    animation.staggerFrom('.stagger-up', 1, { y: 100 }, 0.2);
+  
+    // Play the animation when the component mounts
+    animation.play();
+  }, []);
   
   return (
     <section id='About-section'>
@@ -110,7 +123,7 @@ function About() {
               <div className='text-container'>
             <span className='about-text'><h1>ABOUT-ME</h1> 
             <div><img src='varified.png'></img></div></span>
-            <span className='about-para'><p>Hi, Thank you for visiting my profile! I'm a Front-end Developer that passionate about Innovative technology. I always Incorporate my creativity into my work. For the past few years, I have helped businesses and individuals to achieve functional aesthetic websites. I'm fortunate to be able to work with amazing clients and companies that use Innovative technology.</p>
+            <span className='about-para' className="stagger-up"><p>Hi, Thank you for visiting my profile! I'm a Front-end Developer that passionate about Innovative technology. I always Incorporate my creativity into my work. For the past few years, I have helped businesses and individuals to achieve functional aesthetic websites. I'm fortunate to be able to work with amazing clients and companies that use Innovative technology.</p>
 </span>
 <div className='skills-container'>
   <span className='skills-pill'>HTML5</span> <span className='skills-pill'>CSS</span> <span className='skills-pill'>Javacripts</span> <span className='skills-pill'>React.js</span> <span className='skills-pill'>Typescripts</span> <span className='skills-pill'>Github</span> <span className='skills-pill'>Tailwind</span> <span className='skills-pill'>Figma</span>

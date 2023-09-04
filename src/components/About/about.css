@@ -22,10 +22,13 @@ section#About-section {
 }
 .about-text{
     display: flex;
+    font-Weight:600;
+    font-Family:'Inter', sans-serif;
 }
 .about-text h1{
     padding: 12px;
     font-size: 65px;
+  
 }
 .about-para p{
     text-align: justify;

@@ -15,7 +15,7 @@ import gsap from 'gsap';
 
 
 
-const modelSrc = 'https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb';
+// const modelSrc = 'https://models.readyplayer.me/64c7b1af067a35dfd8b3de7f.glb';
 
 
 function About() {
